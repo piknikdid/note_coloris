@@ -25,7 +25,7 @@ SECRET_KEY = 'a!p*26=sp_%v8#v_xb+2kne^_x*rvawh*60k(0ls-*3myqy+^5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["piknik21.pythonanywhere.com"]
 
 
 # Application definition

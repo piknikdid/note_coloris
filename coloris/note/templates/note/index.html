@@ -9,7 +9,7 @@
   <title>Note</title>
 </head>
 <body>
-  <form action="/url/to/submit/" method="post" class="form">
+  <form  method="post" class="form">
   {% csrf_token %}
   {% bootstrap_form form %}
   {% buttons %}
@@ -18,5 +18,10 @@
     </button>
   {% endbuttons %}
 </form>
+{% for d in data %}
+<p>{{d.title}}</p>
+<p>{{d.text}}</p>
+
+{% endfor %}
 </body>
 </html>

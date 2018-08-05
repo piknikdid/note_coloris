@@ -38,7 +38,6 @@ class Index(TemplateView):
 
         if form.is_valid():
             post = form.save(commit=False)
-            post.created_by =request.user
 
             post.save()
             text=form.cleaned_data['text']
