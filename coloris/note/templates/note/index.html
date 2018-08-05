@@ -1,0 +1,22 @@
+<html>
+<head>
+  {# Load the tag library #}
+  {% load bootstrap3 %}
+  {% bootstrap_messages %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Note</title>
+</head>
+<body>
+  <form action="/url/to/submit/" method="post" class="form">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  {% buttons %}
+    <button type="submit" class="btn btn-primary">
+       Submit
+    </button>
+  {% endbuttons %}
+</form>
+</body>
+</html>
