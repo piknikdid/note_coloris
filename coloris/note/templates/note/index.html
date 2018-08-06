@@ -1,7 +1,9 @@
 <html>
 <head>
-  {# Load the tag library #}
+
   {% load bootstrap3 %}
+  {% bootstrap_css %}
+{% bootstrap_javascript %}
   {% bootstrap_messages %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,15 +14,18 @@
   <form  method="post" class="form">
   {% csrf_token %}
   {% bootstrap_form form %}
-  {% buttons %}
-    <button type="submit" class="btn btn-primary">
-       Submit
-    </button>
-  {% endbuttons %}
+
+{% bootstrap_button button_type="submit" content="Add" button_class="btn-success" %}
+
+
+
 </form>
 {% for d in data %}
-<h1>{{d.title}}</h1>
-<p>{{d.text}}</p>
+<h3 class="text-primary">{{d.title}}</h3>
+<pre>
+  {{d.text}}
+  {{d.pub_date}}
+</pre>
 
 {% endfor %}
 </body>
